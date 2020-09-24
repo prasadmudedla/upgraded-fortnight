@@ -1,0 +1,46 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+public class NZAT {
+
+    public NZAT(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(how = How.XPATH, using = "//div[1]/div/div[2]/ul/li[5]/a/span")
+    public WebElement payATollLink;
+
+    @FindBy(how = How.XPATH, using = "//*[text()='Buy or pay a toll']")
+    public WebElement BuyOrPayAToll;
+
+    @FindBy(how = How.NAME, using = "declare")
+    public WebElement declareCheckBox;
+
+    @FindBy(how = How.XPATH, using = "//input[@type='submit']")
+    public WebElement continueButton;
+
+    @FindBy(how = How.ID, using = "plate_number")
+    public WebElement plateNumberField;
+
+    @FindBy(how = How.ID, using = "trip_2")
+    public WebElement northGwTollField;
+
+    @FindBy(how = How.ID, using = "trip_3")
+    public WebElement taurangaTollField;
+
+    @FindBy(how = How.ID, using = "trip_6")
+    public WebElement takitimuTollField;
+
+    @FindBy(how = How.XPATH, using = "//label[text()='No thanks']")
+    public WebElement noThanksRadioButton;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Pay now']")
+    public WebElement payNowButton;
+
+
+}
